@@ -2,16 +2,26 @@
     display:flex;
     justify-content: space-between;
     margin: auto;
-    padding: auto;
+    
 }
 
 .list{
     display: flex; 
     justify-content: space-between; 
     flex-direction: column;
+    margin-top: 30px;
 }
 
 #starImage{
     width: "30%";
     background-color: blue;
+}
+
+img{
+    width: 100%;
+    
+}
+
+#divImage{
+    width: 500px;
 }
