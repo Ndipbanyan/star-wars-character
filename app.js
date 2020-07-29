@@ -39,29 +39,32 @@ fetch('https://swapi.dev/api/people')
     let btn;
      for(let i=0; i<results.length; i++){
         let star =new Stars(results[i].name, results[i].gender, results[i].height, results[i].birth_year);
-        let wrapper=document.querySelector("#list")
+        let wrapper=document.querySelector("#list");
          let btn = document.createElement("button");   // Create a <button> element
+            btn.id=i;
             btn.textContent = star.name;                   // Insert text
             wrapper.append(btn);               // Append <button> to <div id="list">
 
            
-            let image = document.createElement('img');
+            // let image = document.createElement('img');
 
-                image.src = imagesArray[i];
-                // image.alt = `This is ${star.name}`;
-            let imageDiv=document.getElementsByClassName('starImage');
-                imageDiv.append(image);
+            //     image.src = imagesArray[i];
+            //     // image.alt = `This is ${star.name}`;
+            // let imageDiv=document.getElementById('starImage');
+            //     imageDiv.append(image);
 
-            let gend=document.createElement('p');
-                gend.textContent=star.gender;
-            let p1=document.getElementsByClassName('details');
-                p1.append(gend);
-
+            // let gend=document.createElement('p');
+            //     gend.textContent=star.gender;
+            // let p1=document.getElementsByClassName('details');
+            //     p1.append(gend);
+     }
 
            
             
    
-         }
+
+
+         
     
         })
         .catch(error => {
