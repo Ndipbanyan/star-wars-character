@@ -38,10 +38,10 @@ class Stars{
 
     getDetails(im){
         console.log(im)
-       document.getElementById('act-name').innerHTML = this.name
-       document.getElementById('act-gender').innerHTML = this.gender
-       document.getElementById('act-height').innerHTML = this.height
-       document.getElementById('act-birth').innerHTML = this.birth_year
+       document.getElementById('act-name').innerHTML =`Name: ${this.name}`;
+       document.getElementById('act-gender').innerHTML = `Gender: ${this.gender}`;
+       document.getElementById('act-height').innerHTML = `Height: ${this.height}`;
+       document.getElementById('act-birth').innerHTML = `Birth-Year: ${this.birth_year}`;
        let go = document.querySelector('#act-image')
        go.src = im
     }

@@ -1,3 +1,9 @@
+
+   
+
+
+
+
 #wrapper{
     display:flex;
     justify-content: center;
@@ -11,15 +17,16 @@
      display: flex; 
     justify-content: space-between; 
     flex-direction: column;
-    width: 40%;
-    margin: 30px 100px 30px 50px;
+    /* width: 40%; */
+    margin: 30px 70px 30px 50px;
    
 }
 .actors{
     border-radius: 10px;
     width: 150px;
     height: 100px;
-    box-shadow: 10px 0px 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: white;
 
 }
 
@@ -30,7 +37,7 @@
     flex-direction: column;
     
    
-    width: 60%;
+    /* width: 60%; */
 }
 
 #starImage{
@@ -39,16 +46,18 @@
 }
 
 img{
-    width: 100%;
+    width: 80%;
     
 }
 
 #divImage{
     margin-top: 50px;
-    width: 80%;
+    margin-left: 0px;
+    margin-bottom: 50px;
+    width:fit-content;
     height: 200px; 
     
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); */
     /* width: 500px; */
 }
 
@@ -59,7 +68,7 @@ img{
 #main{
     margin-top: 0px;
     height: 500px;
-    width: 600px;
+    width: 800px;
 
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     display: flex;
