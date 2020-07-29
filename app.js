@@ -15,7 +15,9 @@ let imagesArray=[
     "https://lumiere-a.akamaihd.net/v1/images/Obi-Wan-Kenobi_6d775533.jpeg?region=0%2C0%2C1536%2C864&width=768"
 
 ]
-
+function name(params) {
+    
+}
 class Stars{
 
     constructor(name, gender,height, birth_year){
@@ -25,33 +27,47 @@ class Stars{
         this.height = height;
         this.birth_year = birth_year;
     }
+//     let image = document.createElement('img');
+
+//     image.src = imagesArray[0];
+//     // image.alt = `This is ${star.name}`;
+// let imageDiv=document.getElementById('starImage');
+//     imageDiv.append(image);
+
+  
+
+    getDetails(im){
+        console.log(im)
+       document.getElementById('act-name').innerHTML = this.name
+       document.getElementById('act-gender').innerHTML = this.gender
+       document.getElementById('act-height').innerHTML = this.height
+       document.getElementById('act-birth').innerHTML = this.birth_year
+       let go = document.querySelector('#act-image')
+       go.src = im
+    }
 
     
 }
 
-fetch('https://swapi.dev/api/people')
+fetch('https://swapi.dev/api/people/')
 .then((res) => { return res.json() })
 .then(({results}) => {
 
     
         //console.log(wrapper);
   
-    let btn;
+    let btn
      for(let i=0; i<results.length; i++){
         let star =new Stars(results[i].name, results[i].gender, results[i].height, results[i].birth_year);
-        let wrapper=document.querySelector("#list");
-         let btn = document.createElement("button");   // Create a <button> element
+        let wrapper=document.querySelector(".list");
+          btn = document.createElement("button");   // Create a <button> element
             btn.id=i;
+            btn.className="actors"
             btn.textContent = star.name;                   // Insert text
             wrapper.append(btn);               // Append <button> to <div id="list">
 
            
-            // let image = document.createElement('img');
-
-            //     image.src = imagesArray[i];
-            //     // image.alt = `This is ${star.name}`;
-            // let imageDiv=document.getElementById('starImage');
-            //     imageDiv.append(image);
+            
 
             // let gend=document.createElement('p');
             //     gend.textContent=star.gender;
@@ -59,8 +75,22 @@ fetch('https://swapi.dev/api/people')
             //     p1.append(gend);
      }
 
+     document.querySelectorAll(".actors").forEach((el, index) => {
+        el.addEventListener("click",(index) => {
+       const  buttonName = index.target.innerHTML;
+       console.log(results);
+            results.forEach((e, index) => {
+                if (e.name == buttonName){
+                    const{name, gender, height, birth_year} = e
+
+                    const user = new Stars(name, gender, height, birth_year).getDetails(imagesArray[index])
+                }
+
+            })
+        })
+     })
+     
            
-            
    
 
 

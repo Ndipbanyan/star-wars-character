@@ -5,8 +5,13 @@
     padding: auto;
 }
 
-#list{
-    display: flex;
-    justify-content: space-around;
+.list{
+    display: flex; 
+    justify-content: space-between; 
     flex-direction: column;
+}
+
+#starImage{
+    width: "30%";
+    background-color: blue;
 }
