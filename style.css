@@ -34,7 +34,20 @@
     font-family: cursive;
     font-weight: bold;
     font-size: medium;
+
 }
+
+
+
+    .actors:hover {
+        background: rgb(243, 240, 240);
+        letter-spacing: 1px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(250, 245, 245, 0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(230, 221, 221, 0.57);
+        box-shadow: 5px 40px -10px rgba(248, 246, 246, 0.57);
+        transition: all 0.4s ease 0s;
+        }
+
 
 
 
