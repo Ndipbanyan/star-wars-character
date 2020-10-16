@@ -27,12 +27,7 @@ class Stars{
         this.height = height;
         this.birth_year = birth_year;
     }
-//     let image = document.createElement('img');
 
-//     image.src = imagesArray[0];
-//     // image.alt = `This is ${star.name}`;
-// let imageDiv=document.getElementById('starImage');
-//     imageDiv.append(image);
 
   
 
@@ -54,7 +49,7 @@ fetch('https://swapi.dev/api/people/')
 .then(({results}) => {
 
     
-        //console.log(wrapper);
+       
   
     let btn
      for(let i=0; i<results.length; i++){
@@ -69,19 +64,16 @@ fetch('https://swapi.dev/api/people/')
            
             
 
-            // let gend=document.createElement('p');
-            //     gend.textContent=star.gender;
-            // let p1=document.getElementsByClassName('details');
-            //     p1.append(gend);
      }
 
      document.querySelectorAll(".actors").forEach((el, index) => {
         el.addEventListener("click",(index) => {
        const  buttonName = index.target.innerHTML;
-       console.log(results);
-            results.forEach((e, index) => {
-                if (e.name == buttonName){
-                    const{name, gender, height, birth_year} = e
+       
+            
+            results.forEach((element, index) => {
+                if (element.name == buttonName){
+                    const{name, gender, height, birth_year} = element
 
                     const user = new Stars(name, gender, height, birth_year).getDetails(imagesArray[index])
                 }
@@ -89,11 +81,6 @@ fetch('https://swapi.dev/api/people/')
             })
         })
      })
-     
-           
-   
-
-
          
     
         })
